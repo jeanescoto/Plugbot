@@ -541,7 +541,7 @@ function drawUserlistItem(imagePath, color, username) {
 Function voteWoot() {
    setTimeout(
       function () {
-        $("#button-vote-positive").click()
+        $("#button-vote-positive").click();
       }
       ,5500
    );

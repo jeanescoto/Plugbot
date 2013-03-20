@@ -209,7 +209,7 @@ function initUIListeners() {
         autowoot = !autowoot;
         $(this).css("color", autowoot ? "#3FFF00" : "#ED1C24");
         if (autowoot) {
-            voteWoot();
+            voteAutoWoot();
         }
         jaaulde.utils.cookies.set(COOKIE_WOOT, autowoot);
     });
@@ -265,7 +265,7 @@ function djAdvanced(obj) {
      * If auto-woot is enabled, WOOT! the song.
      */
     if (autowoot) {
-        voteWoot();
+        voteAutoWoot();
     }
 
     /*
@@ -538,7 +538,7 @@ function drawUserlistItem(imagePath, color, username) {
         '<p style="cursor:pointer;' + (imagePath === 'void' ? '' : 'text-indent:6px !important;') + 'color:' + color + ';' + ((API.getDJs()[0].username == username) ? 'font-size:15px;font-weight:bold;' : '') + '" onclick="$(\'#chat-input-field\').val($(\'#chat-input-field\').val() + \'@' + username + ' \').focus();">' + username + '</p>');
 }
 
-Function voteWoot() {
+Function voteAutoWoot() {
    setTimeout(
       function () {
         $("#button-vote-positive").click();
@@ -630,7 +630,7 @@ function onCookiesLoaded() {
      * Hit the woot button, if autowoot is enabled.
      */
     if (autowoot) {
-       voteWoot();
+       voteAutoWoot();
     }
 
     /*

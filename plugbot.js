@@ -538,15 +538,14 @@ function drawUserlistItem(imagePath, color, username) {
         '<p style="cursor:pointer;' + (imagePath === 'void' ? '' : 'text-indent:6px !important;') + 'color:' + color + ';' + ((API.getDJs()[0].username == username) ? 'font-size:15px;font-weight:bold;' : '') + '" onclick="$(\'#chat-input-field\').val($(\'#chat-input-field\').val() + \'@' + username + ' \').focus();">' + username + '</p>');
 }
 
-Function voteAutoWoot() {
-   setTimeout(
-      function () {
-        $("#button-vote-positive").click();
-      }
-      ,5500
-   );
+function voteAutoWoot() {
+    setTimeout(
+        function () {
+            $("#button-vote-positive").click();
+        },
+        5500
+    );
 }
-
 
 ///////////////////////////////////////////////////////////
 ////////// EVERYTHING FROM HERE ON OUT IS INIT ////////////

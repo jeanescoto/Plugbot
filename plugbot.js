@@ -620,7 +620,10 @@ function onCookiesLoaded() {
      * Hit the woot button, if autowoot is enabled.
      */
     if (autowoot) {
-        $("#button-vote-positive").click();
+        setTimeout(
+            $("#button-vote-positive").click()
+            ,5500
+        );
     }
 
     /*
